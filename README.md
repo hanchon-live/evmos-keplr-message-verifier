@@ -44,3 +44,7 @@ const pubKey = Buffer.from(wallets[0].pubkey).toString('base64')
 ## Why?
 
 Using keplr to sign with `signArbitraty` using `Evmos` it will sign the message using the `keccak_256` hashing algorithm, but when validating the message it's using the cosmos' default so it'll return always invalid signer.
+
+## Known issues
+
+The serializer is breaking for even length string and it's failing to validate the signer
